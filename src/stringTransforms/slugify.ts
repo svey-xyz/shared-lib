@@ -1,7 +1,7 @@
 import _slugify from 'slugify'
+import type { _slugifyOptions } from '../../types/strings'
 // import { type ExtendArgs } from 'slugify'
 
-type slugifyOptions = Parameters<typeof _slugify>[1]
 
 export const _DEFAULT_SLUG_OPTIONS = {
 	replacement: '-',  // replace spaces with replacement character, defaults to `-`
@@ -12,7 +12,7 @@ export const _DEFAULT_SLUG_OPTIONS = {
 	trim: true         // trim leading and trailing replacement chars, defaults to `true`
 }
 
-export const slugify = (string: string, options: slugifyOptions = _DEFAULT_SLUG_OPTIONS) => {
+export const slugify = (string: string, options: _slugifyOptions = _DEFAULT_SLUG_OPTIONS) => {
 	if (!string) return
 	return _slugify(String(string), options)
 }
