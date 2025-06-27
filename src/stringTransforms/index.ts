@@ -9,3 +9,8 @@ export const StringTransforms = {
 	pluralize,
 	slugify,
 };
+
+export { camelCaseToWords }
+export { capitalize }
+export { pluralize }
+export { slugify }

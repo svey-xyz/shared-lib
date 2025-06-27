@@ -1,6 +1,5 @@
 import _slugify from 'slugify'
-import type { _slugifyOptions } from '../../types/strings'
-// import { type ExtendArgs } from 'slugify'
+export type _slugifyOptions = Parameters<typeof _slugify>[1]
 
 
 export const _DEFAULT_SLUG_OPTIONS = {

@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
     // Enable latest features
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ESNext"],
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "esnext",
     "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
+    // "jsx": "react-jsx",
+    // "allowJs": true,
 
     // Bundler mode
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    // "allowImportingTsExtensions": true,
+    // "verbatimModuleSyntax": true,
     "noEmit": true,
 
     // Best practices
@@ -23,10 +23,5 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
-		"paths": {
-			"@shared-lib/*": ["./src/*"],
-			"@shared-lib": ["./src/index.ts"],
-			"@shared-lib/types/*": ["./types/*"],
-		},
   }
 }

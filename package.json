@@ -1,13 +1,14 @@
 {
   "name": "shared-lib",
-  "module": "src/index.ts",
+	"main": "dist/index.js",
   "type": "module",
-	"types": "types/global.d.ts",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json"
+	},
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "@types/bun": "latest",
+		"typescript": "^5.0.0"
   },
   "dependencies": {
     "pluralize": "^8.0.0",
