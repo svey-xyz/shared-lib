@@ -3,7 +3,12 @@
 	"compilerOptions": {
 		"noEmit": false,
 		"outDir": "dist",
-		"declaration": true
+		"declaration": true,
+		"rootDir": "src",
+		"baseUrl": ".",
+    "paths": {
+      "@shared-lib/*": ["./src/*"]
+    },
 	},
 	"include": [
 		"src/**/*"
