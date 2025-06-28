@@ -1,7 +1,7 @@
 {
   "name": "shared-lib",
   "type": "module",
-  "main": "./dist/index.cjs",
+  "main": "./dist/cjs-compat.js",
 	"module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -21,7 +21,7 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "build": "tsup && cp cjs-compat.js dist/",
 		"prepublishOnly": "bun run build"
   },
   "devDependencies": {
