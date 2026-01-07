@@ -2,18 +2,18 @@
   "name": "shared-lib",
   "type": "module",
   "main": "./dist/cjs-compat.js",
-	"module": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
-				"types": "./dist/index.d.ts",
-				"default": "./dist/index.js"
-			},
-			"require": {
-				"types": "./dist/index.d.cts",
-				"default": "./dist/index.cjs"
-			}
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./StringTransforms": {
       "import": "./dist/StringTransforms/index.js",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsup && cp cjs-compat.js dist/",
-		"prepublishOnly": "bun run build"
+    "prepublishOnly": "bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -30,6 +30,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@types/pluralize": "^0.0.33",
     "pluralize": "^8.0.0",
     "slugify": "^1.6.6"
   }
